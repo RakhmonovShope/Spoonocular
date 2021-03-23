@@ -1,0 +1,11 @@
+#container {
+  margin-top: 48px;
+  padding: 5px 20px;
+}
+.main-cart-class {
+  display: flex;
+  flex-direction: row;
+  @media (max-width: 575px) {
+    flex-direction: column;
+  }
+}

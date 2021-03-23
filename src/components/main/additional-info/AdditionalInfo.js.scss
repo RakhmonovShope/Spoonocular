@@ -1,0 +1,160 @@
+$xlarge: 1200px;
+$large: 992px;
+$medium: 768px;
+$small: 576px;
+h1,h2,h3,h4,h5,h6,p {
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+
+.pizzarasm {
+  background-image: url("../../../assets/img/about-5.jpg");
+  width: 100%;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wholesome {
+  margin-top: 80px;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Asap", sans-serif;
+  line-height: 28px;
+  h4 {
+    font-size: 20px;
+    font-weight: 800 !important;
+  }
+  h1 {
+    font-size: 45px;
+  }
+  p {
+    font-size: 14px;
+    font-family: "Montserrat", "Segoe UI", sans-serif !important;
+    text-transform: none;
+    font-weight: 500;
+    text-align: justify;
+  }
+}
+.restaurant-image{
+  
+    img{
+      width: 100%; 
+      display: block;
+      margin: 0 auto;
+    }
+  
+}
+ 
+//               <!------------------------- Screen size change  ------------------->
+
+@media (max-width: $xlarge){
+  .wholesome{
+    h1{
+      font-size: 40px;
+    }
+  }
+}
+
+@media (max-width: $large){
+  .pizzarasm {
+    height: 400px;
+  }
+  .wholesome{
+    h4{
+      font-size: 18px;
+    font-weight: 800 !important;
+    }
+    h1{
+      font-size: 35px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 450;
+    }
+  }
+  .restaurant-image{
+    .col-lg-6{
+      img{
+      }
+    }
+  }
+}
+
+@media (max-width: $medium){
+  .pizzarasm {
+    height: 300px;
+  }
+.wholesome{
+  margin-top: 60px;
+  line-height: 27px;
+  h4{
+    font-size: 13px;
+    font-weight: 600;
+  }
+  h1{
+    font-size: 30px;
+  }
+  p{
+    font-size: 12px;
+    font-weight: 600;
+  }
+  }
+}
+.restaurant-image{
+    img{
+      margin-top: 30px;
+      width: 80%;
+    }
+}
+
+
+@media (max-width: $small){
+  .pizzarasm {
+    height: 250px;
+  }
+  .wholesome{
+    margin-top: 30px;
+    line-height: 20px;
+      
+    h4{
+      font-size: 12px;
+      font-weight: 600;
+    }
+    h1{
+      font-size: 25px;
+    }
+    p{
+      font-size: 10px;
+      font-weight: 550;
+    }
+    }
+    .additional-info-restaurant{
+      margin-top: 20px !important;
+    }   
+}
+  @media (max-width: 340px){
+    
+    .wholesome{
+      margin-top: 30px;
+      line-height: 17px;
+        
+      h4{
+        font-size: 11px;
+        font-weight: 500;
+      }
+      h1{
+        font-size: 20px;
+      }
+      p{
+        font-size: 10px;
+        font-weight: 400;
+      }
+      }
+      .additional-info-restaurant{
+        margin-top: 20px !important;
+      }   
+  }
+  

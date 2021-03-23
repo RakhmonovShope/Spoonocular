@@ -1,0 +1,231 @@
+$large: 992px;
+$medium: 768px;
+$small: 576px;
+$rang: rgb(8, 41, 47);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.card-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  box-sizing: border-box !important;
+  .recipe-tittle {
+    color: rgb(8, 41, 47);
+    font-family: "Asap", sans-serif;
+    text-transform: uppercase;
+  }
+  .card {
+    width: 350px;
+    display: flex;
+    margin: 20px 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.4s;
+    border-radius: 10px;
+    border-color: rgba(8, 41, 47, 0.747);
+    background-color: #19191ac4;
+    &:hover {
+      box-shadow: 5px 0 7px rgba(8, 41, 47, 0.747),
+        -5px 0 7px rgba(8, 41, 47, 0.747), 0 7px 7px rgba(8, 41, 47, 0.747);
+    }
+    a img {
+      width: 100%;
+      height: 200px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    h5 {
+      color: #76c3d4;
+      padding: 20px 0;
+    }
+    p {
+      color: rgb(134, 134, 134);
+      width: 330px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .breaf-info-food {
+      margin-bottom: 10px;
+      span {
+        font-size: 12px;
+        border-right: 1px solid #fff;
+        padding-right: 10px;
+        color: #fff;
+        &:last-child {
+          border: none;
+        }
+      }
+      i {
+        padding: 0 5px;
+        color: #fff;
+      }
+    }
+    .button-flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px !important;
+      margin-left: 10px;
+      margin-right: 10px;
+      a {
+        color: white;
+        padding: 10px;
+        flex-grow: 0.3;
+        font-size: 15px;
+        font-weight: 500;
+        margin-left: 5px;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: color, background 0.6s;
+        background-color: rgba(20, 27, 33, 0.62);
+        cursor: pointer;
+        font-weight: 600;
+        &:first-child {
+          padding: 10px 5px;
+          flex-grow: 0.1;
+        }
+        &:hover {
+          color: #fff;
+          background-color: #76c3d4;
+        }
+        &:focus {
+          outline: none;
+          box-shadow: 0 0 2px 2px rgba(43, 77, 61, 0.644);
+        }
+        &:hover span {
+          transform: rotate(90deg);
+          transition: transform 0.5s;
+        }
+      }
+    }
+  }
+}
+
+.card h5,
+.card p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#view-icon {
+  margin-left: 5px !important;
+}
+
+@media (max-width: $large) {
+  .recipe-tittle {
+    font-size: 35px;
+  }
+  .card-wrapper {
+    margin-top: 10px;
+    .card {
+      width: 300px;
+      a img {
+        height: 180px;
+      }
+      h5 {
+        font-size: 17px;
+        padding: 15px 0;
+      }
+      .breaf-info-food {
+        margin-bottom: 8px;
+        span {
+          font-size: 11px;
+        }
+      }
+      .button-flex {
+        margin-bottom: 8px !important;
+        a {
+          padding: 8px;
+          flex-grow: 0.2;
+          font-size: 12px;
+          font-weight: 600;
+          &:first-child {
+            padding: 8px 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $medium) {
+  .recipe-tittle {
+    font-size: 30px;
+  }
+  .card-wrapper {
+    .card {
+      width: 300px;
+
+      a img {
+        height: 180px;
+      }
+      h5 {
+        font-size: 17px;
+        padding: 10px 0;
+      }
+      .breaf-info-food {
+        margin-bottom: 8px;
+        span {
+          font-size: 11px;
+        }
+      }
+      .button-flex {
+        margin-bottom: 8px !important;
+        a {
+          padding: 8px;
+          flex-grow: 0.2;
+          font-size: 12px;
+          font-weight: 600;
+          &:first-child {
+            padding: 8px 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $small) {
+  .recipe-tittle {
+    font-size: 25px;
+  }
+  .card-wrapper {
+    margin-top: 0;
+    .card {
+      width: 250px;
+      margin: 13px 2px;
+      a img {
+        height: 170px;
+      }
+      h5 {
+        font-size: 14px;
+        margin: 1px 0 !important;
+      }
+      .breaf-info-food {
+        margin-bottom: 4px;
+        span {
+          font-size: 10px;
+        }
+      }
+      span.badge {
+        font-size: 10px;
+      }
+      .button-flex {
+        margin-bottom: 8px !important;
+        a {
+          padding: 6px;
+          flex-grow: 0.1;
+          font-size: 10px;
+          font-weight: 500;
+          &:first-child {
+            padding: 6px 2px;
+          }
+        }
+      }
+    }
+  }
+}

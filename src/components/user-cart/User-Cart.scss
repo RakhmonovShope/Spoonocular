@@ -1,0 +1,70 @@
+$base-color-yellow: #eedc00;
+$base-color-blue: #76c3d4;
+$base-font-family: "Asap", sans-serif;
+#cart {
+  width: fit-content;
+}
+.cart-wrapper {
+  margin: 20px 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #00000044;
+  font-family: "Montserrat", "Segoe UI", sans-serif !important;
+  padding-right: 50px;
+
+  img {
+    height: 120px;
+    width: 140px;
+    margin-right: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px -4px #00007744;
+  }
+  .original-data {
+    width: 20%;
+  }
+  input {
+    width: 10%;
+    margin-right: 20px;
+    padding: 5px 15px;
+    background-color: #84838377;
+    border: 1px solid #ffffff77;
+    border-radius: 5px;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 4px rgb(72, 116, 83);
+    }
+  }
+  & > h5 {
+    width: 10%;
+    text-align: center;
+  }
+  button {
+    margin-left: 15px;
+  }
+  .per-seving {
+    width: 130px;
+  }
+}
+
+.alert-box {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.success {
+  display: none;
+}
+.successVis {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  display: visible;
+}

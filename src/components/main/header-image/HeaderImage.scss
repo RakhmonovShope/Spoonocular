@@ -1,0 +1,89 @@
+$xlarge: 1200px;
+$large: 992px;
+$medium: 768px;
+$small: 576px;
+
+header {
+  background: rgba(0, 0, 0, 0.3);
+}
+.header-container {
+  background-image: url("../../../assets//img/fon-image.jpg");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  .overlay {
+    z-index: 9;
+    background: rgba(0, 0, 0, 0.25);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      margin-top: 40px;
+      font-size: 75px;
+      font-family: "Asap", sans-serif;
+      text-transform: uppercase;
+      color: white;
+      text-align: center;
+    }
+    .see-more-button {
+      text-transform: uppercase;
+      font-size: 15px;
+      margin-top: 100px;
+      background-color: #eedc00;
+      padding: 10px 26px;
+      border-radius: 6px;
+      color: #76c3d4;
+      text-decoration: none;
+      font-weight: 800;
+      cursor: pointer;
+      &:hover {
+        background-color: #76c3d4;
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: $medium) {
+  .header-container {
+    .overlay {
+      h1 {
+        font-size: 50px;
+      }
+      .see-more-button {
+        font-size: 12px;
+        padding: 6px 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: $small) {
+  .header-container {
+    .overlay {
+      h1 {
+        font-size: 35px;
+      }
+      .see-more-button {
+        font-size: 10px;
+        padding: 5px 10px;
+      }
+    }
+  }
+}
+@media (max-width: 310px) {
+  .header-container {
+    .overlay {
+      h1 {
+        font-size: 20px;
+      }
+    }
+  }
+}

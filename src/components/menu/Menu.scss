@@ -1,0 +1,106 @@
+$base-color-yellow: #eedc00;
+$base-color-blue: #76c3d4;
+$base-font-family: "Asap", sans-serif;
+$large: 992px;
+$medium: 768px;
+$small: 576px;
+
+.menu-wrapper {
+  margin-top: 76px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $base-font-family;
+  h1 {
+    margin: 20px 0;
+  }
+}
+.menu-list-wrapper {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .menu-list {
+    margin: 0 10px;
+    padding: 20px 10px;
+    line-height: 26px;
+    cursor: pointer;
+    &:hover {
+      background-image: url("../../assets/img/curl-y-2.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
+    a {
+      text-decoration: none;
+      color: rgb(8, 41, 47) !important;
+      text-transform: uppercase;
+      font-size: 18px;
+      margin: 0;
+    }
+  }
+  .active {
+    background-image: url("../../assets/img/curl-y-2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+}
+
+@media (max-width: $large) {
+  .menu-wrapper {
+    margin-top: 76px;
+    h1 {
+      margin: 15px 0;
+      font-size: 30px;
+    }
+  }
+  .menu-list-wrapper {
+    .menu-list {
+      margin: 0 7px;
+      padding: 17px 8px;
+      line-height: 20px;
+      a {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: $medium) {
+  .menu-wrapper {
+    h1 {
+      margin: 15px 0;
+      font-size: 25px;
+    }
+  }
+  .menu-list-wrapper {
+    .menu-list {
+      margin: 0 5px;
+      padding: 15px 6px;
+      line-height: 15px;
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: $small) {
+  .menu-wrapper {
+    h1 {
+      margin: 12px 0;
+      font-size: 20px;
+    }
+  }
+  .menu-list-wrapper {
+    .menu-list {
+      margin: 0 2px;
+      padding: 12px 5px;
+      line-height: 10px;
+      a {
+        font-size: 13px;
+      }
+    }
+  }
+}

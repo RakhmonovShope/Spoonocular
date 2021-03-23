@@ -1,0 +1,114 @@
+.payment-wrapper {
+  background-color: #0e101c;
+  color: white;
+  text-align: justify;
+  margin-top: 56px;
+  padding: 20px 30px;
+  width: 40%;
+  height: fit-content;
+  font-family: "Asap", sans-serif;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin-right: 20px;
+  box-shadow: 0 0 12px 2px black;
+  span {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+    font-size: small;
+    color: #bf1650;
+    font-weight: 600;
+    display: block;
+    &::before {
+      display: inline;
+      content: "⚠ ";
+    }
+    &:first-child {
+      &::before {
+        content: "";
+      }
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      background-color: rgb(1, 70, 64);
+      text-transform: none;
+    }
+  }
+
+  .card-images {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    img {
+      margin: 10px 20px;
+      width: 200px;
+      height: 150px;
+      &:first-child {
+        margin-left: -100px;
+      }
+      &:last-child {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+  form {
+    label {
+      display: block;
+      color: rgb(122, 122, 122);
+      margin-top: 10px;
+    }
+    .card-name-wrapper {
+      border-bottom: 1px solid rgb(122, 122, 122);
+      input {
+        padding-bottom: 10px;
+      }
+    }
+    .card-number {
+      border-bottom: 1px solid rgb(122, 122, 122);
+      input {
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+      .input-number {
+        width: 38px;
+        padding-bottom: 10px;
+      }
+    }
+    input {
+      color: rgb(212, 209, 209);
+      border-radius: 5px;
+      border: none;
+      margin: 0 5px;
+      background-color: transparent;
+      outline: none;
+      &::placeholder {
+        color: rgb(212, 209, 209);
+      }
+    }
+    .expire-date {
+      input {
+        width: 50px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgb(122, 122, 122);
+        border-radius: 0;
+      }
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #76c3d4;
+      border-radius: 5px;
+      padding: 5px 10px;
+      border: none;
+      outline: none;
+      color: white;
+      font-family: "Asap", sans-serif;
+      text-transform: uppercase;
+      width: 100%;
+    }
+  }
+}
