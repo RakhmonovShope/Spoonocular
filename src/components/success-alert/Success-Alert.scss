@@ -1,18 +1,18 @@
 .alert-box {
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-  }
-  .success {
-    display: none;
-  }
-  .successVis {
-    color: #3c763d;
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
-    display: visible;
-  }
+  bottom: 0;
+  right: 10px;
+  position: fixed;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  color: #3c763d;
+  background-color: #cdf8bc;
+  border-left: 5px solid rgb(4, 126, 14);
+  transition: opacity 0.5s;
+}
+.success {
+  opacity: 0;
+}
+.successVis {
+  opacity: 1;
+}

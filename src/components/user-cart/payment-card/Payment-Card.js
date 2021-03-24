@@ -13,7 +13,7 @@ const PaymentCard = (props) => {
   return (
     <div className="payment-wrapper">
       <span>Total Sum: $ {props.total}</span>
-      <h1>Card details</h1>
+      <h4>Card details</h4>
       <h6>Card type</h6>
       <div className="card-images">
         <img src={rasm2} alt="viza" />

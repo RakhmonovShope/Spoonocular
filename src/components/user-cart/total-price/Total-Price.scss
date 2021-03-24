@@ -6,34 +6,52 @@ $base-font-family: "Asap", sans-serif;
   background-color: $base-color-yellow;
   font-family: $base-font-family;
   color: black;
+  width: 100%;
   border-radius: 10px;
-  padding: 10px 20px;
+  padding: 10px 10px;
+  margin-bottom: 30px;
   p {
     font-style: italic;
     margin: 0;
     padding: 0;
     span {
-      font-size: 30px;
+      font-size: 20px;
     }
   }
   .checkout {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     a {
-      width: 40%;
       text-align: center;
-      padding: 10px;
+      padding: 5px 10px;
       background-color: #76c3d4;
       text-decoration: none;
       border-radius: 5px;
       color: white;
       transition: background 0.3s;
-      text-shadow: 0 -1px 0 #eedc00;
       &:hover {
-        background-color: #0dbee6;
+        background-color: #33caec;
         color: #eedc00;
-        text-shadow: 0 -1px 0 white;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .total-wrapper {
+    padding: 10px;
+    margin-bottom: 40px;
+    h3 {
+      font-size: 20px;
+    }
+    p {
+      span {
+        font-size: 20px;
+      }
+    }
+    .checkout {
+      a {
+        padding: 3px 7px;
+        background-color: #76c3d4;
       }
     }
   }

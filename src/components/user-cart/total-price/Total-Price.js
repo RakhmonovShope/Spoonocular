@@ -5,7 +5,7 @@ import "./Total-Price.scss";
 const TotalPrice = (props) => {
   return (
     <div className="total-wrapper">
-      <h1>Total Price</h1>
+      <h3>Total Price</h3>
       <p>
         <span>$</span> {props.total}
       </p>

@@ -11,8 +11,8 @@ class UserCartContainer extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <div className="container" id="container">
-          <h1 className="text-center mt-4">
+        <div className="container user-cart-content-wrapper">
+          <h1 className="text-center ">
             <b>{this.props.name}</b> here your cart
           </h1>
           <div className="main-cart-class">

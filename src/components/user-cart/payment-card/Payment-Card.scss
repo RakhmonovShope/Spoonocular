@@ -1,24 +1,52 @@
+$xlarge: 1200px;
+$large: 992px;
+$medium: 768px;
+$small: 576px;
 .payment-wrapper {
   background-color: #0e101c;
   color: white;
+  width: 400px;
   text-align: justify;
-  margin-top: 56px;
-  padding: 20px 30px;
-  width: 40%;
   height: fit-content;
+  margin-top: 40px;
+  padding: 20px 30px;
   font-family: "Asap", sans-serif;
   text-transform: uppercase;
   border-radius: 5px;
-  margin-right: 20px;
   box-shadow: 0 0 12px 2px black;
+  h4,
+  h6 {
+    margin: 6px 0;
+  }
+  h6 {
+    color: rgb(122, 122, 122);
+  }
+  .card-images {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    img {
+      margin: 10px 5px;
+      &:first-child {
+        width: 120px;
+        height: 100px;
+      }
+      &:last-child {
+        width: 100px;
+        height: 80px;
+      }
+    }
+  }
   span {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
       "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
       "Helvetica Neue", sans-serif;
-    font-size: small;
+    display: block;
+    font-size: 12px;
     color: #bf1650;
     font-weight: 600;
-    display: block;
     &::before {
       display: inline;
       content: "⚠ ";
@@ -35,24 +63,6 @@
     }
   }
 
-  .card-images {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    img {
-      margin: 10px 20px;
-      width: 200px;
-      height: 150px;
-      &:first-child {
-        margin-left: -100px;
-      }
-      &:last-child {
-        width: 70px;
-        height: 70px;
-      }
-    }
-  }
   form {
     label {
       display: block;
@@ -62,7 +72,7 @@
     .card-name-wrapper {
       border-bottom: 1px solid rgb(122, 122, 122);
       input {
-        padding-bottom: 10px;
+        padding-bottom: 7px;
       }
     }
     .card-number {
@@ -76,14 +86,14 @@
       }
       .input-number {
         width: 38px;
-        padding-bottom: 10px;
+        padding-bottom: 7px;
       }
     }
     input {
       color: rgb(212, 209, 209);
       border-radius: 5px;
       border: none;
-      margin: 0 5px;
+      // margin: 0 5px;
       background-color: transparent;
       outline: none;
       &::placeholder {
@@ -93,22 +103,130 @@
     .expire-date {
       input {
         width: 50px;
-        padding-bottom: 10px;
+        padding-bottom: 7px;
         border-bottom: 1px solid rgb(122, 122, 122);
         border-radius: 0;
       }
       margin-bottom: 10px;
     }
     button {
-      background-color: #76c3d4;
-      border-radius: 5px;
-      padding: 5px 10px;
       border: none;
       outline: none;
+      display: block;
       color: white;
-      font-family: "Asap", sans-serif;
+      margin: 0 auto;
+      border-radius: 5px;
+      padding: 5px 10px;
       text-transform: uppercase;
-      width: 100%;
+      background-color: #76c3d4;
+      font-family: "Asap", sans-serif;
+    }
+  }
+}
+
+@media (max-width: $xlarge) {
+  .payment-wrapper {
+    width: 400px;
+    margin-top: 40px;
+    padding: 20px 30px;
+    h4,
+    h6 {
+      margin: 6px 0;
+    }
+    .card-images {
+      img {
+        margin: 10px 5px;
+        &:first-child {
+          width: 100px;
+          height: 80px;
+        }
+        &:last-child {
+          width: 80px;
+          height: 70px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $large) {
+  .payment-wrapper {
+    h4 {
+      font-size: 16px;
+    }
+    h6 {
+      font-size: 14px;
+      color: rgb(122, 122, 122);
+    }
+    .card-images {
+      img {
+        margin: 10px 0;
+        &:first-child {
+          width: 110px;
+          height: 80px;
+        }
+        &:last-child {
+          width: 90px;
+          height: 60px;
+        }
+      }
+    }
+    form {
+      label {
+        display: block;
+        font-size: 13px;
+      }
+
+      input {
+        &::placeholder {
+          font-size: 14px;
+        }
+      }
+      button {
+        padding: 4px 8px;
+      }
+    }
+  }
+}
+@media (max-width: $medium) {
+  .payment-wrapper {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 30px;
+    h4 {
+      font-size: 14px;
+    }
+    h6 {
+      font-size: 13px;
+      color: rgb(122, 122, 122);
+    }
+    .card-images {
+      img {
+        margin: 10px;
+        &:first-child {
+          width: 110px;
+          height: 80px;
+        }
+        &:last-child {
+          width: 90px;
+          height: 60px;
+        }
+      }
+    }
+    form {
+      label {
+        display: block;
+        font-size: 13px;
+      }
+
+      input {
+        &::placeholder {
+          font-size: 14px;
+        }
+      }
+      button {
+        padding: 4px 8px;
+      }
     }
   }
 }

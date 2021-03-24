@@ -60,44 +60,71 @@ class UserCart extends Component {
 
   renderUserCart = () => {
     if (this.props.cart.length === 0) {
-      return <div>You hav no orders</div>;
+      return <React.Fragment>You hav no orders</React.Fragment>;
     }
     return this.state.products.map((food, index) => {
       return (
-        <div className="cart-wrapper d-flex align-items-center" key={index}>
-          <img src={food.image} alt="ddd" />
-          <div className="original-data">
-            <h6 className="w">{food.title}</h6>
-          </div>
-          <div className="per-seving">
-            <b>${food.pricePerServing} </b>
-          </div>
-          <input
-            type="number"
-            min="1"
-            value={food.count}
-            onChange={(e) => {
-              const newProducts = [...this.state.products];
-              newProducts[index].count = e.target.value;
-              this.setState({ products: newProducts });
-            }}
-          />
-          <h5>${(food.count * food.pricePerServing).toFixed(2)}</h5>
-          <button
-            className="btn btn-danger"
-            onClick={() => this.handleClickShowAlert(food)}
-          >
-            remove
-          </button>
-        </div>
+        <tr key={index} className="product-cart-row">
+          <td>
+            <img
+              src={food.image}
+              alt={food.id}
+              className="table-product-image"
+            />
+          </td>
+          <td>
+            <span className="table-product-title">{food.title}</span>
+          </td>
+
+          <td>
+            <input
+              className="table-product-input"
+              type="number"
+              min="1"
+              max="40"
+              value={food.count}
+              onChange={(e) => {
+                const newProducts = [...this.state.products];
+                newProducts[index].count = e.target.value;
+                this.setState({ products: newProducts });
+              }}
+            />
+          </td>
+          <td>
+            <span className="table-product-tprice">
+              ${(food.count * food.pricePerServing).toFixed(2)}
+            </span>{" "}
+          </td>
+          <td>
+            <button
+              className="btn btn-danger"
+              onClick={() => this.handleClickShowAlert(food)}
+            >
+              <i className="fas fa-trash-alt"></i>
+            </button>
+          </td>
+        </tr>
       );
     });
   };
 
   render() {
     return (
-      <div className="container flex-column py-3" id="cart">
-        {this.renderUserCart()}
+      <div className="container">
+        <div id="cart">
+          <table>
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Qty</th>
+                <th>Sum</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>{this.renderUserCart()}</tbody>
+          </table>
+        </div>
         <TotalPrice total={this.getTotalSum(this.state.products).toFixed(2)} />
         <SuccessAlert
           state={this.state.showingAlert}

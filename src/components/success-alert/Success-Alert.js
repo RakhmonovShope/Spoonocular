@@ -4,7 +4,8 @@ import "./Success-Alert.scss";
 
 const SuccessAlert = ({ state, tittle }) => {
   return (
-    <div className={state ? "alert-box successVis" : "alert-box success"}>
+    <div className={`alert-box ${state ? "successVis" : "success"}`}>
+      <i className="fas fa-check-circle mr-2"></i>
       {tittle}
     </div>
   );
