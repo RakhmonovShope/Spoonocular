@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 
+import history from "../../history";
+import SuccesAlert from "../success-alert";
 import { createCart } from "../../actions/index";
 import IngredientsList from "./Ingredients-List";
 import IngredientsFlex from "./Ingredients-Flex";
@@ -11,6 +13,7 @@ const FullRecipeInfo = ({ location }) => {
   const { recipe } = location.state;
   const [checked, setChecked] = useState(false);
   const [count, setCount] = useState(1);
+  const [showAlert, setShowAlert] = useState(false);
   const dispatch = useDispatch();
 
   const addToCart = () => {
@@ -49,6 +52,18 @@ const FullRecipeInfo = ({ location }) => {
         </div>
       );
     }
+  };
+
+  const isSigned = (recipe) => {
+    if (!localStorage.getItem("token")) {
+      history.push("/signin");
+    }
+    addToCart(recipe);
+    setShowAlert(true);
+
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 4000);
   };
 
   return (
@@ -114,11 +129,12 @@ const FullRecipeInfo = ({ location }) => {
         <h1 className="full-info-instructions">Intructions</h1>
         <InstructionSteps recipe={recipe} />
         <div className="d-flex justify-content-end">
-          <a className="add-to-cart-button" onClick={() => addToCart()}>
+          <a className="add-to-cart-button" onClick={() => isSigned(recipe)}>
             Add to cart
           </a>
         </div>
       </div>
+      <SuccesAlert tittle="Successfully added to cart" state={showAlert} />
     </div>
   );
 };
